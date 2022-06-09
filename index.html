@@ -8,7 +8,9 @@
 </head>
 <body>
     <script>
-        console.log('Hello World!');
+        const playerSelection = "Rock";
+        const computerSelection = computerPlay();
+        console.log(playRound(playerSelection, computerSelection));
 
         function computerPlay() {
             var choice = '';
@@ -25,8 +27,53 @@
             return choice;
         };
 
-        console.log(computerPlay());
-
+        function playRound(player, computer) {
+            switch (player.toUpperCase()) {
+                case 'ROCK': 
+                    switch (computer.toUpperCase()) {
+                        case 'ROCK':
+                            result = 'Draw!';
+                            break;
+                        case 'PAPER':
+                            result = 'You lose! Paper beats Rock';
+                            break;
+                        case 'SCISSORS':
+                            result = 'You win! Rock beats Scissors';
+                            break;
+                    } 
+                    break;
+                case 'PAPER':
+                    switch  (computerSelection.toUpperCase()) {
+                        case 'ROCK':
+                            result = 'You win! Paper beats Rock';
+                            break;
+                        case 'PAPER':
+                            result = 'Draw!';
+                            break;
+                        case 'SCISSORS':
+                            result = 'You lose! Scissors beats Paper';
+                            break;
+                    } 
+                    break;
+                case 'SCISSORS':
+                    switch  (computerSelection.toUpperCase()) {
+                        case 'ROCK':
+                            result = 'You lose! Rock beats Scissors';
+                            break;
+                        case 'PAPER':
+                            result = 'You win! Scissors beats Paper';
+                            break;
+                        case 'SCISSORS':
+                            result = 'Draw!';
+                            break;
+                    } 
+                    break;
+                default: 
+                    result = 'Your choice is not recognized';
+                    break;
+            }
+            return result;
+        };
     </script>
 </body>
 </html>
