@@ -9,6 +9,24 @@
 <body>
     <script>
         console.log('Hello World!');
+
+        function computerPlay() {
+            var choice = '';
+            var rand = Math.floor(Math.random()*100)+1;
+            
+            if (rand <= 33) {
+                choice = 'Rock';
+            } else if (rand <= 66) {
+                choice = 'Paper';
+            } else {
+                choice = 'Scissors';
+            }
+
+            console.log(choice);
+        };
+
+        computerPlay();
+
     </script>
 </body>
 </html>
