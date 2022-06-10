@@ -8,20 +8,28 @@
 </head>
 <body>
     <script>
-        const playerSelection = "Rock";
+        const choices = ['ROCK','PAPER','SCISSORS'];
+        const playerSelection = playerPlay();
         const computerSelection = computerPlay();
         console.log(playRound(playerSelection, computerSelection));
 
+        function playerPlay() {
+            var choice = '';
+            while (choices.indexOf(choice) < 0) {
+                choice = prompt('Please enter your choice (Rock/Paper/Scissors)').toUpperCase();
+            }
+            return choice;
+        };
+        
         function computerPlay() {
-            const choices = ['Rock','Paper','Scissors'];
             var rand = Math.floor(Math.random()*3);
             return choices[rand];
         };
 
         function playRound(player, computer) {
-            switch (player.toUpperCase()) {
+            switch (player) {
                 case 'ROCK': 
-                    switch (computer.toUpperCase()) {
+                    switch (computer) {
                         case 'ROCK':
                             result = 'Draw!';
                             break;
@@ -34,7 +42,7 @@
                     } 
                     break;
                 case 'PAPER':
-                    switch  (computerSelection.toUpperCase()) {
+                    switch  (computerSelection) {
                         case 'ROCK':
                             result = 'You win! Paper beats Rock';
                             break;
@@ -47,7 +55,7 @@
                     } 
                     break;
                 case 'SCISSORS':
-                    switch  (computerSelection.toUpperCase()) {
+                    switch  (computerSelection) {
                         case 'ROCK':
                             result = 'You lose! Rock beats Scissors';
                             break;
