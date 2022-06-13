@@ -64,7 +64,11 @@ function playRound(player, computer) {
             result = 'Your choice is not recognized';
             break;
     }
-    console.log(result);
+
+    // Shows the result in the div with the 'result' id 
+    const resultDiv = document.getElementById('result');
+    resultDiv.textContent = result;
+    // console.log(result);
 };
 
 function reset() {
