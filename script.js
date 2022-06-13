@@ -68,40 +68,9 @@ function playRound(player, computer) {
     // Shows the result in the div with the 'result' id 
     const resultDiv = document.getElementById('result');
     resultDiv.textContent = result;
-    // console.log(result);
 };
 
 function reset() {
     playerScore = 0;
     computerScore = 0;
 };
-
-// game(); 
-
-// function playerPlay() {
-//     var choice = '';
-//     while (CHOICES.indexOf(choice) < 0) {
-//         choice = prompt('Please enter your choice (Rock/Paper/Scissors)').toUpperCase();
-//     }
-//     return choice;
-// };
-
-// function game() {
-//     var playerSelection;
-//     var computerSelection;
-//     for(var i = 1; i <= 5; i++) {
-//         playerSelection = playerPlay();
-//         computerSelection = computerPlay();
-//         console.log(playRound(playerSelection, computerSelection));
-//     }
-//     if(computerScore > playerScore) {
-//         console.log('YOU LOSE : '+computerScore+' to '+playerScore);
-//     }
-//     else if(playerScore > computerScore) {
-//         console.log('YOU WIN : '+playerScore+' to '+computerScore);
-//     }
-//     else {
-//         console.log('DRAW : '+playerScore+' to '+computerScore);
-//     }
-//     reset();
-// };
