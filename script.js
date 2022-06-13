@@ -7,7 +7,7 @@ const computerScoreDiv = document.getElementById('computerScore');
 const buttons = document.querySelectorAll('button');
 
 buttons.forEach(button => button.addEventListener('click', () => {
-    playRound(button.textContent.toUpperCase(), computerPlay());
+    playRound(button.id.toUpperCase(), computerPlay());
 }));
 
 function computerPlay() {
