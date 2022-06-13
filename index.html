@@ -1,30 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="./style.css">
     <script src="./script.js" defer></script>
 </head>
+
 <body>
-    <button>
-        <img src="./images/rock.png">
-        Rock
-    </button>
+    <div id="title">
+        <h1>It's time to play!</h1>
+    </div>
 
-    <button>
-        <img src="./images/paper.png">
-        Paper
-    </button>
-    
-    <button>
-        <img src="./images/scissors.png">
-        Scissors
-    </button>
+    <div id="choices">
+        <button id="rock">
+            <img src="./images/rock.png">
+        </button>
 
-    <div id="result"></div>
-    <div id="playerScore"></div>
-    <div id="computerScore"></div>
+        <button id="paper">
+            <img src="./images/paper.png">
+        </button>
+
+        <button id="scissors">
+            <img src="./images/scissors.png">
+        </button>
+    </div>
+
+    <div id="content">
+        <div id="result"></div>
+        <div id="scores">
+            <div id="playerScore"></div>
+            <div id="computerScore"></div>
+        </div>
+    </div>
 </body>
+
 </html>
